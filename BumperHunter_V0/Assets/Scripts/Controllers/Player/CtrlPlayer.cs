@@ -13,9 +13,14 @@ public class CtrlPlayer : MonoBehaviour {
         get { return _rage; }
         set
         {
-            if(value + _rage > 100.0f)
+            if(value > 100.0f)
             {
                 RageOut();
+                return;
+            }
+            else if(value < 0.0f)
+            {
+                _rage = 0.0f;
                 return;
             }
 
@@ -28,12 +33,12 @@ public class CtrlPlayer : MonoBehaviour {
         get { return _stamina; }
         set
         {
-            if(value + _stamina > 100.0f)
+            if(value > 100.0f)
             {
                 _stamina = 100.0f;
                 return;
             }
-            else if(_stamina - value < 0.0f)
+            else if(value < 0.0f)
             {
                 _stamina = 0.0f;
                 // Play exhausted audio.
