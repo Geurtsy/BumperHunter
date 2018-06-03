@@ -66,6 +66,7 @@ public class CtrlPlayer : MonoBehaviour {
 
     private void Start()
     {
+        _myAudioSource = GetComponent<AudioSource>();
         _movingMech = GetComponent<IMove>();
 
         ResetValues();
