@@ -33,8 +33,7 @@ public class CtrlPlayer : MonoBehaviour {
                 _stamina = 100.0f;
                 return;
             }
-
-            if(_stamina - value < 0.0f)
+            else if(_stamina - value < 0.0f)
             {
                 _stamina = 0.0f;
                 // Play exhausted audio.
@@ -91,7 +90,8 @@ public class CtrlPlayer : MonoBehaviour {
         {
             Bumper bumper = go.GetComponent<Bumper>();
             Rage -= bumper._length;
-            _myAudioSource.PlayOneShot(_bumperCollectSounds[Random.Range(0, _bumperCollectSounds.Length)]);
+            //_myAudioSource.PlayOneShot(_bumperCollectSounds[Random.Range(0, _bumperCollectSounds.Length)]);
+            Destroy(go);
         }
     }
 
@@ -110,7 +110,7 @@ public class CtrlPlayer : MonoBehaviour {
     // Reset values.
     private void ResetValues()
     {
-        Stamina = 100;
-        Rage = 0;
+        Stamina = 100.0f;
+        Rage = 0.0f;
     }
 }
