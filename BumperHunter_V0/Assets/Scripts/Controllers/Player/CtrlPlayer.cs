@@ -90,7 +90,7 @@ public class CtrlPlayer : MonoBehaviour {
         {
             Bumper bumper = go.GetComponent<Bumper>();
             Rage -= bumper._length;
-            //_myAudioSource.PlayOneShot(_bumperCollectSounds[Random.Range(0, _bumperCollectSounds.Length)]);
+            _myAudioSource.PlayOneShot(_bumperCollectSounds[Random.Range(0, _bumperCollectSounds.Length)]);
             Destroy(go);
         }
     }
