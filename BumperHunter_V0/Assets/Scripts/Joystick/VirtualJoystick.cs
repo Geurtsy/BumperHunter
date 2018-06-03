@@ -64,9 +64,9 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
             return Input.GetAxis("Vertical");
     }
 
-    public void Rotate(Quaternion rot)
-    {
-        float angle = rot.eulerAngles.y;
-        gameObject.transform.rotation = Quaternion.AngleAxis(angle, new Vector3(0, 0, 1));
-    }
+    //public void Rotate(Quaternion rot)
+    //{
+    //    float angle = rot.eulerAngles.y;
+    //    gameObject.transform.rotation = Quaternion.AngleAxis(angle, new Vector3(0, 0, 1));
+    //}
 }

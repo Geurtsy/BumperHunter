@@ -79,7 +79,7 @@ public class CtrlPlayer : MonoBehaviour {
         else
         {
             Quaternion camRot = Camera.main.transform.rotation;
-            _joystick.Rotate(camRot);
+            //_joystick.Rotate(camRot);
         }
     }
 

@@ -58,8 +58,8 @@ GameObject:
   - component: {fileID: 114909137282928674}
   - component: {fileID: 114438799553911356}
   m_Layer: 0
-  m_Name: OBJ_Player
-  m_TagString: Untagged
+  m_Name: OBJ_Player_Damon
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
